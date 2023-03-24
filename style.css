@@ -1,0 +1,29 @@
+body{
+    background-color:black;
+}
+
+.container-divs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.exemplo{
+    color: aliceblue;
+
+}
+
+form label{
+    color: aliceblue;
+    width: 100px;
+    display: inline-block;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.botao{
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}
