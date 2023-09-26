@@ -1,30 +1,34 @@
+const form = document.getElementById('formImc')
 
-const retornarDiagnosticoDoUsuario = () => {
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
 
-    const altura =  document.formImc.elements["altura"].value;
-    const peso =  document.formImc.elements["peso"].value;
+    const altura =  document.getElementById('altura').value;
+    const peso =  document.getElementById('peso').value;
+    
     const IMC = peso / (altura * altura);
-    let resultadoIMC = undefined
+    
+    const resultado = document.getElementById('valor');
+    let descricao = '';
 
+    
     if(IMC <= 18.5){
-        resultadoIMC = "Você está abaixo do Normal"
-        return resultadoIMC
-
+        descricao = "Você está abaixo do Normal!"
+        
     }else if(IMC > 18.5 && IMC <= 24.9){
-        resultadoIMC = "Você está no peso Normal"
-        return resultadoIMC
-
+        descricao = "Você está no peso Normal"
+        
     }else if(IMC > 24.9 && IMC <= 29.9){
-        resultadoIMC = "Você está com Sobrepeso"
-        return resultadoIMC
-
+        descricao = "Você está com Sobrepeso"
+        
     }else if(IMC > 29.9 && IMC <= 40){
-        resultadoIMC = "Você está com Obesidade"
-        return resultadoIMC
-
+        descricao = "Você está com Obesidade!"
+        
     }else{
-        resultadoIMC = "Você está com Obesidade Grave"
-        return resultadoIMC
+        descricao = "Você está com Obesidade Grave!!"
+        
     }
     
-}
+    resultado.textContent = IMC.toFixed(2)
+    document.getElementById('descricao').textContent = descricao;
+});

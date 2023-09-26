@@ -6,62 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de IMC</title>
     <link rel="stylesheet" href="style.css">
-
-    <!-- <script type="text/javascript">
-        e no form action="#" para caso o script seja colocado no mesmo arquivo HTML
-    </script> -->
-    
-    <!-- <script type="text/javascript">
-
-        const retornarDiagnosticoDoUsuario = () => {
-
-            const altura =  document.formImc.elements["altura"].value;
-            const peso =  document.formImc.elements["peso"].value;
-            const IMC = peso / (altura * altura);
-            let resultadoIMC = undefined
-
-            if(IMC <= 18.5){
-                resultadoIMC = "Você está abaixo do Normal"
-                return resultadoIMC
-
-            }else if(IMC > 18.5 && IMC <= 24.9){
-                resultadoIMC = "Você está no peso Normal"
-                return resultadoIMC
-
-            }else if(IMC > 24.9 && IMC <= 29.9){
-                resultadoIMC = "Você está com Sobrepeso"
-                return resultadoIMC
-
-            }else if(IMC > 29.9 && IMC <= 40){
-                resultadoIMC = "Você está com Obesidade"
-                return resultadoIMC
-
-            }else{
-                resultadoIMC = "Você está com Obesidade Grave"
-                return resultadoIMC
-            }
-
-        }
-    </script> -->
-
+  
 </head>
 <body>
     <div class="container-divs">
         <div class="exemplo">
-            <p><em>Insira altura e peso como neste exemplo. Altura: 1.70 / Peso: 88.4</em></p>
+            <h1>Calculadora de IMC</p>
+            <p><em>Exemplo: Altura: 1.70 / Peso: 88.4</em></p>
         </div>
         <div class="formulario">
             <form id="formImc" name="formImc">
-                <label for="altura">Insira a Altura: </label>
+                <label for="altura">Altura: </label>
                 <input type="text" id="altura" name="altura">
                 <br>
-                <label for="peso">Insira o Peso: </label>
+                <label for="peso">Peso: </label>
                 <input type="text" id="peso" name="peso">
                 <br>
             </form>
+            <div id="resultadoIMC" class="resultado">
+                <span>Seu IMC é: </span>
+                <span id="valor"></span> <!-- Aqui será o valor de IMC -->
+            </div>
+            <div id="descricao">
+                <span></span> <!-- Aqui será um texto -->
+            </div>
         </div>
         <div>
-            <button id="button" class="botao" type="submit" form="formImc" onclick="retornarDiagnosticoDoUsuario()">Calcular</button>
+            <button id="button" class="botao" type="submit" form="formImc">Calcular</button>
         </div>
     </div>
     <script src="script.js"></script>

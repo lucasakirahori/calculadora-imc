@@ -1,12 +1,42 @@
-body{
-    background-color:black;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body{
+    background-color:black;
+    color: aliceblue;
+}
+
+h1{
+    font-size: 5rem;
+}
+
+p{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+span{
+    font-size: 1.5rem;
+    color: aliceblue;
+}
+
+#descricao{
+    font-size: 1.5rem;
+    color: aliceblue;
+}
 .container-divs{
+    margin-top: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.resultado{
+    margin: 5px 0px 5px;
 }
 
 .exemplo{
@@ -16,14 +46,33 @@ body{
 
 form label{
     color: aliceblue;
-    width: 100px;
+    width: 5vw;
     display: inline-block;
-    margin-top: 3px;
-    margin-bottom: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 2rem;
+}
+
+input{
+    height: 2rem;
+    font-size: 1.8rem;
+    width: 5vw;
+    border-radius: 5px;
+
 }
 
 .botao{
+    padding: 10px;
+    font-size: 1rem;
+    width: 5vw;
     align-items: center;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+
+}
+
+.botao:hover{
+    background-color: burlywood;
+    transition: .3s;
 }
